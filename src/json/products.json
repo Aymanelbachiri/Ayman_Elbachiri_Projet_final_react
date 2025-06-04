@@ -1,0 +1,235 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Premium quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
+      "price": 199.99,
+      "originalPrice": 249.99,
+      "category": "Electronics",
+      "subcategory": "Audio",
+      "brand": "TechSound",
+      "rating": 4.5,
+      "reviewCount": 1247,
+      "inStock": true,
+      "quantity": 50,
+      "images": [
+        "/images/products/headphones-1.jpg",
+        "/images/products/headphones-2.jpg",
+        "/images/products/headphones-3.jpg"
+      ],
+      "features": [
+        "Active Noise Cancellation",
+        "30-hour battery life",
+        "Quick charge (5 min = 3 hours)",
+        "Bluetooth 5.0",
+        "Comfortable over-ear design"
+      ],
+      "specifications": {
+        "weight": "250g",
+        "dimensions": "18 x 15 x 8 cm",
+        "connectivity": "Bluetooth 5.0, 3.5mm jack",
+        "batteryLife": "30 hours",
+        "chargingTime": "2 hours"
+      },
+      "tags": ["wireless", "bluetooth", "noise-cancelling", "premium"],
+      "isFeatured": true,
+      "isOnSale": true,
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Organic Cotton T-Shirt",
+      "description": "Comfortable and sustainable organic cotton t-shirt. Available in multiple colors and sizes. Perfect for everyday wear.",
+      "price": 29.99,
+      "originalPrice": 29.99,
+      "category": "Clothing",
+      "subcategory": "T-Shirts",
+      "brand": "EcoWear",
+      "rating": 4.3,
+      "reviewCount": 892,
+      "inStock": true,
+      "quantity": 200,
+      "images": [
+        "/images/products/tshirt-1.jpg",
+        "/images/products/tshirt-2.jpg",
+        "/images/products/tshirt-3.jpg"
+      ],
+      "features": [
+        "100% Organic Cotton",
+        "Pre-shrunk fabric",
+        "Comfortable fit",
+        "Machine washable",
+        "Eco-friendly production"
+      ],
+      "specifications": {
+        "material": "100% Organic Cotton",
+        "fit": "Regular",
+        "care": "Machine wash cold",
+        "origin": "Made in USA"
+      },
+      "variants": [
+        { "size": "S", "color": "White", "sku": "ECO-TS-W-S" },
+        { "size": "M", "color": "White", "sku": "ECO-TS-W-M" },
+        { "size": "L", "color": "White", "sku": "ECO-TS-W-L" },
+        { "size": "S", "color": "Black", "sku": "ECO-TS-B-S" },
+        { "size": "M", "color": "Black", "sku": "ECO-TS-B-M" },
+        { "size": "L", "color": "Black", "sku": "ECO-TS-B-L" }
+      ],
+      "tags": ["organic", "cotton", "sustainable", "casual"],
+      "isFeatured": false,
+      "isOnSale": false,
+      "createdAt": "2024-01-20T14:30:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Smart Fitness Watch",
+      "description": "Advanced fitness tracking watch with heart rate monitoring, GPS, and smartphone connectivity. Track your health and stay connected.",
+      "price": 299.99,
+      "originalPrice": 349.99,
+      "category": "Electronics",
+      "subcategory": "Wearables",
+      "brand": "FitTech",
+      "rating": 4.7,
+      "reviewCount": 2156,
+      "inStock": true,
+      "quantity": 75,
+      "images": [
+        "/images/products/smartwatch-1.jpg",
+        "/images/products/smartwatch-2.jpg",
+        "/images/products/smartwatch-3.jpg"
+      ],
+      "features": [
+        "Heart Rate Monitoring",
+        "Built-in GPS",
+        "7-day battery life",
+        "Water resistant (50m)",
+        "Sleep tracking",
+        "Smartphone notifications"
+      ],
+      "specifications": {
+        "display": "1.4 inch AMOLED",
+        "batteryLife": "7 days",
+        "waterResistance": "5ATM",
+        "connectivity": "Bluetooth, WiFi, GPS",
+        "compatibility": "iOS, Android"
+      },
+      "tags": ["fitness", "smartwatch", "gps", "health"],
+      "isFeatured": true,
+      "isOnSale": true,
+      "createdAt": "2024-01-10T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Ceramic Plant Pot Set",
+      "description": "Beautiful set of 3 ceramic plant pots with drainage holes and saucers. Perfect for indoor plants and home decoration.",
+      "price": 45.99,
+      "originalPrice": 45.99,
+      "category": "Home & Garden",
+      "subcategory": "Planters",
+      "brand": "GreenHome",
+      "rating": 4.4,
+      "reviewCount": 567,
+      "inStock": true,
+      "quantity": 120,
+      "images": [
+        "/images/products/plantpots-1.jpg",
+        "/images/products/plantpots-2.jpg",
+        "/images/products/plantpots-3.jpg"
+      ],
+      "features": [
+        "Set of 3 different sizes",
+        "Drainage holes included",
+        "Matching saucers",
+        "High-quality ceramic",
+        "Modern minimalist design"
+      ],
+      "specifications": {
+        "material": "Ceramic",
+        "sizes": "Small (4\"), Medium (6\"), Large (8\")",
+        "color": "Matte White",
+        "drainage": "Yes, with saucers"
+      },
+      "tags": ["plants", "ceramic", "home-decor", "indoor"],
+      "isFeatured": false,
+      "isOnSale": false,
+      "createdAt": "2024-01-25T16:45:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Professional Chef Knife",
+      "description": "High-carbon stainless steel chef knife with ergonomic handle. Essential tool for any kitchen, perfect for professional and home cooks.",
+      "price": 89.99,
+      "originalPrice": 119.99,
+      "category": "Home & Garden",
+      "subcategory": "Kitchen",
+      "brand": "ChefMaster",
+      "rating": 4.8,
+      "reviewCount": 1834,
+      "inStock": true,
+      "quantity": 85,
+      "images": [
+        "/images/products/knife-1.jpg",
+        "/images/products/knife-2.jpg",
+        "/images/products/knife-3.jpg"
+      ],
+      "features": [
+        "High-carbon stainless steel",
+        "8-inch blade",
+        "Ergonomic handle",
+        "Razor-sharp edge",
+        "Dishwasher safe"
+      ],
+      "specifications": {
+        "bladeLength": "8 inches",
+        "material": "High-carbon stainless steel",
+        "handleMaterial": "Polymer",
+        "weight": "200g",
+        "maintenance": "Hand wash recommended"
+      },
+      "tags": ["kitchen", "knife", "cooking", "professional"],
+      "isFeatured": true,
+      "isOnSale": true,
+      "createdAt": "2024-01-12T11:20:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Yoga Mat Premium",
+      "description": "Non-slip premium yoga mat made from eco-friendly materials. Perfect for yoga, pilates, and other floor exercises.",
+      "price": 59.99,
+      "originalPrice": 59.99,
+      "category": "Sports & Outdoors",
+      "subcategory": "Fitness",
+      "brand": "ZenFit",
+      "rating": 4.6,
+      "reviewCount": 743,
+      "inStock": true,
+      "quantity": 150,
+      "images": [
+        "/images/products/yogamat-1.jpg",
+        "/images/products/yogamat-2.jpg",
+        "/images/products/yogamat-3.jpg"
+      ],
+      "features": [
+        "Non-slip surface",
+        "Eco-friendly materials",
+        "6mm thickness",
+        "Lightweight and portable",
+        "Easy to clean"
+      ],
+      "specifications": {
+        "dimensions": "183 x 61 x 0.6 cm",
+        "weight": "1.2kg",
+        "material": "TPE (Thermoplastic Elastomer)",
+        "thickness": "6mm",
+        "colors": "Purple, Blue, Green, Pink"
+      },
+      "tags": ["yoga", "fitness", "exercise", "eco-friendly"],
+      "isFeatured": false,
+      "isOnSale": false,
+      "createdAt": "2024-01-18T13:10:00Z"
+    }
+  ],
+  "totalProducts": 6,
+  "lastUpdated": "2024-01-25T16:45:00Z"
+}

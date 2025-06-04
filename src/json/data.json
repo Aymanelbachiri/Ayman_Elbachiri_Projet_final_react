@@ -1,0 +1,36 @@
+{
+  "products": "./products.json",
+  "blogs": "./blogs.json",
+  "categories": {
+    "products": [
+      "Electronics",
+      "Clothing",
+      "Home & Garden",
+      "Sports & Outdoors",
+      "Books",
+      "Beauty & Health",
+      "Automotive",
+      "Toys & Games"
+    ],
+    "blogs": [
+      "Technology",
+      "Lifestyle",
+      "Business",
+      "Health & Wellness",
+      "Travel",
+      "Food & Recipes",
+      "Fashion",
+      "Education"
+    ]
+  },
+  "site": {
+    "name": "Your Store",
+    "description": "Your one-stop shop for everything you need",
+    "currency": "USD",
+    "shipping": {
+      "free_shipping_threshold": 50,
+      "standard_shipping": 5.99,
+      "express_shipping": 12.99
+    }
+  }
+}
