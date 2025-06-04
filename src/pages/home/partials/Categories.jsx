@@ -5,38 +5,20 @@ const Categories = () => {
     const categories = [
         {
             id: 1,
-            name: "Dresses",
-            image: images.cards1,
-            link: "/shop?category=Clothing"
-        },
-        {
-            id: 2,
             name: "Sunglasses",
             image: images.cards4,
             link: "/shop?category=Accessories"
         },
         {
-            id: 3,
+            id: 2,
             name: "Watches",
             image: images.cards2,
             link: "/shop?category=Accessories"
         },
         {
-            id: 4,
-            name: "Footerwear",
-            image: images.cards3,
-            link: "/shop?category=Shoes"
-        },
-        {
-            id: 5,
+            id: 3,
             name: "Bags",
             image: images.cards5,
-            link: "/shop?category=Accessories"
-        },
-        {
-            id: 6,
-            name: "Accessories",
-            image: images.cards6,
             link: "/shop?category=Accessories"
         }
     ];

@@ -1,0 +1,199 @@
+/* Cart Animation Styles */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-success {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.3s ease-in;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+.animate-pulse-success {
+  animation: pulse-success 1s ease-out;
+}
+
+/* Product Image Hover Effects */
+.product-image-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail Selection Effect */
+.thumbnail-selected {
+  border-color: #1f2937;
+  box-shadow: 0 0 0 2px rgba(31, 41, 55, 0.2);
+}
+
+.thumbnail-unselected {
+  border-color: #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+
+.thumbnail-unselected:hover {
+  border-color: #9ca3af;
+}
+
+/* Button Loading Animation */
+.button-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Quantity Button Effects */
+.quantity-button {
+  transition: all 0.2s ease;
+}
+
+.quantity-button:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.quantity-button:active {
+  transform: scale(0.95);
+}
+
+/* Size and Color Selection Effects */
+.size-option {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.size-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.size-option.selected {
+  transform: scale(1.1);
+}
+
+.color-option {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.selected::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid #1f2937;
+  border-radius: inherit;
+}
+
+/* Expandable Section Animation */
+.expandable-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.expandable-content.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.expandable-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Success Checkmark Animation */
+@keyframes checkmark {
+  0% {
+    stroke-dasharray: 0 50;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 50 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkmark-animation {
+  animation: checkmark 0.5s ease-in-out;
+}

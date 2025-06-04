@@ -1,12 +1,14 @@
 
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaHeart, FaSearch } from 'react-icons/fa';
 import { useCart } from '../../context/CartContext';
 import productsData from '../../json/products.json';
 import images from '../../constants/images';
 
 const Shop = () => {
+    const navigate = useNavigate();
     const [filteredProducts, setFilteredProducts] = useState(productsData.products);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedColors, setSelectedColors] = useState([]);
@@ -171,14 +173,18 @@ const Shop = () => {
     // Product Card Component
     const ProductCard = ({ product }) => {
         const [isWishlisted, setIsWishlisted] = useState(false);
-        const { addToCart } = useCart();
 
-        const handleAddToCart = () => {
-            addToCart(product, 1);
+        const handleProductClick = () => {
+            navigate(`/product/${product.id}`);
+        };
+
+        const handleWishlistClick = (e) => {
+            e.stopPropagation();
+            setIsWishlisted(!isWishlisted);
         };
 
         return (
-            <div className="bg-white group cursor-pointer">
+            <div className="bg-white group cursor-pointer" onClick={handleProductClick}>
                 <div className="relative overflow-hidden">
                     <img
                         src={images.shopi2}
@@ -197,7 +203,7 @@ const Shop = () => {
 
                     {/* Wishlist button */}
                     <button
-                        onClick={() => setIsWishlisted(!isWishlisted)}
+                        onClick={handleWishlistClick}
                         className={`absolute top-3 right-3 p-2 rounded-full transition-colors ${
                             isWishlisted ? 'bg-red-500 text-white' : 'bg-white text-gray-600 hover:bg-red-500 hover:text-white'
                         }`}

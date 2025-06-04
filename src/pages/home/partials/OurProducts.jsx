@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaHeart, FaShoppingCart, FaEye } from 'react-icons/fa';
 import { useCart } from '../../../context/CartContext';
 import productsData from '../../../json/products.json';
 import images from '../../../constants/images';
 
 const OurProducts = () => {
+    const navigate = useNavigate();
     const [activeCategory, setActiveCategory] = useState('All');
     const [hoveredProduct, setHoveredProduct] = useState(null);
 
@@ -23,8 +25,18 @@ const OurProducts = () => {
             ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
             : 0;
 
-        const handleAddToCart = () => {
+        const handleAddToCart = (e) => {
+            e.stopPropagation();
             addToCart(product, 1);
+        };
+
+        const handleWishlistClick = (e) => {
+            e.stopPropagation();
+            setIsWishlisted(!isWishlisted);
+        };
+
+        const handleProductClick = () => {
+            navigate(`/product/${product.id}`);
         };
 
         const isProductInCart = isInCart(product.id);
@@ -33,6 +45,7 @@ const OurProducts = () => {
         return (
             <div
                 className="relative group cursor-pointer"
+                onClick={handleProductClick}
                 onMouseEnter={() => setHoveredProduct(product.id)}
                 onMouseLeave={() => setHoveredProduct(null)}
             >
@@ -54,7 +67,7 @@ const OurProducts = () => {
                     <div className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                             <button
-                                onClick={() => setIsWishlisted(!isWishlisted)}
+                                onClick={handleWishlistClick}
                                 className={`p-2 rounded-full transition-colors duration-200 ${isWishlisted ? 'bg-red-500 text-white' : 'bg-white text-gray-600 hover:bg-red-500 hover:text-white'}`}
                             >
                                 <FaHeart size={14} />
