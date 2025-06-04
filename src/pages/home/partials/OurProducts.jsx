@@ -51,7 +51,7 @@ const OurProducts = () => {
             >
                 <div className="relative overflow-hidden bg-gray-100">
                     <img
-                        src={images.shopi2} // Using placeholder from your constants
+                        src={images[product.image] || images.shopi2}
                         alt={product.name}
                         className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                     />

@@ -4,6 +4,7 @@ import { FaHeart, FaMinus, FaPlus, FaChevronDown, FaChevronUp, FaCheck } from 'r
 import { useCart } from '../../context/CartContext';
 import productsData from '../../json/products.json';
 import images from '../../constants/images';
+import '../../styles/animations.css';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -129,14 +130,16 @@ const ProductDetail = () => {
                                     <button
                                         key={index}
                                         onClick={() => setSelectedImage(index)}
-                                        className={`w-16 h-20 border-2 overflow-hidden ${
-                                            selectedImage === index ? 'border-gray-800' : 'border-gray-200'
+                                        className={`w-16 h-20 border-2 overflow-hidden transition-all duration-200 ${
+                                            selectedImage === index
+                                                ? 'thumbnail-selected border-gray-800 scale-105'
+                                                : 'thumbnail-unselected border-gray-200 hover:border-gray-400'
                                         }`}
                                     >
                                         <img
                                             src={img}
                                             alt={`${product.name} ${index + 1}`}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"
                                         />
                                     </button>
                                 ))}
@@ -144,11 +147,11 @@ const ProductDetail = () => {
 
                             {/* Main Image */}
                             <div className="flex-1">
-                                <div className="aspect-square bg-gray-100 overflow-hidden">
+                                <div className="aspect-square bg-gray-100 overflow-hidden rounded-lg">
                                     <img
                                         src={productImages[selectedImage]}
                                         alt={product.name}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover product-image-hover cursor-zoom-in"
                                     />
                                 </div>
                             </div>
@@ -177,10 +180,10 @@ const ProductDetail = () => {
                                         <button
                                             key={size}
                                             onClick={() => setSelectedSize(size)}
-                                            className={`w-10 h-10 border text-sm font-medium ${
+                                            className={`size-option w-10 h-10 border text-sm font-medium transition-all duration-200 ${
                                                 selectedSize === size
-                                                    ? 'bg-red-500 text-white border-red-500'
-                                                    : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'
+                                                    ? 'selected bg-red-500 text-white border-red-500 scale-110'
+                                                    : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400 hover:shadow-md'
                                             }`}
                                         >
                                             {size}
@@ -191,15 +194,15 @@ const ProductDetail = () => {
 
                             {/* Color Selection */}
                             <div className="mb-6">
-                                <div className="flex gap-2">
+                                <div className="flex gap-3">
                                     {colors.map((color) => (
                                         <button
                                             key={color.name}
                                             onClick={() => setSelectedColor(color.name)}
-                                            className={`w-8 h-8 rounded border-2 ${
+                                            className={`color-option w-8 h-8 rounded border-2 transition-all duration-200 ${
                                                 selectedColor === color.name
-                                                    ? 'border-gray-800'
-                                                    : 'border-gray-300'
+                                                    ? 'selected border-gray-800 scale-125 shadow-lg'
+                                                    : 'border-gray-300 hover:border-gray-500 hover:scale-110'
                                             }`}
                                             style={{ backgroundColor: color.value }}
                                             title={color.name}
@@ -210,17 +213,18 @@ const ProductDetail = () => {
 
                             {/* Quantity and Add to Cart */}
                             <div className="flex gap-4 mb-6">
-                                <div className="flex items-center border border-gray-300">
+                                <div className="flex items-center border border-gray-300 rounded">
                                     <button
                                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                                        className="p-2 hover:bg-gray-100"
+                                        className="quantity-button p-2 hover:bg-gray-100 rounded-l"
+                                        disabled={quantity <= 1}
                                     >
                                         <FaMinus size={12} />
                                     </button>
-                                    <span className="px-4 py-2 min-w-[60px] text-center">{quantity}</span>
+                                    <span className="px-4 py-2 min-w-[60px] text-center font-medium bg-gray-50">{quantity}</span>
                                     <button
                                         onClick={() => setQuantity(quantity + 1)}
-                                        className="p-2 hover:bg-gray-100"
+                                        className="quantity-button p-2 hover:bg-gray-100 rounded-r"
                                     >
                                         <FaPlus size={12} />
                                     </button>

@@ -187,7 +187,7 @@ const Shop = () => {
             <div className="bg-white group cursor-pointer" onClick={handleProductClick}>
                 <div className="relative overflow-hidden">
                     <img
-                        src={images.shopi2}
+                        src={images[product.image] || images.shopi2}
                         alt={product.name}
                         className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
